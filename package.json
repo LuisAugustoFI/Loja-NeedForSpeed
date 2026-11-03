@@ -1,7 +1,15 @@
 {
   "name": "loja",
   "version": "1.0.0",
-  "description": "",
+  "description": "A criação de uma aplicação para venda de peças de carro, seu diferencial é o uso de NOSQL para o banco e node, com apis do bootstrap, tailwind e mercadopago",
+  "homepage": "https://github.com/LuisAugustoFI/Loja-NeedForSpeed#readme",
+  "bugs": {
+    "url": "https://github.com/LuisAugustoFI/Loja-NeedForSpeed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisAugustoFI/Loja-NeedForSpeed.git"
+  },
   "license": "ISC",
   "author": "",
   "type": "module",
@@ -10,9 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
-    "mongoose": "^9.6.2",
-    "mongose": "^0.0.2-security"
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
   }
 }

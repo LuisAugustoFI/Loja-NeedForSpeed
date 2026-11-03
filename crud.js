@@ -17,8 +17,35 @@ const conn = async () => {
         console.log("Erro, conectar ao MongoDB:", error);
     }
 };
+    
+//criação do schema vendas
+app.post('/vendas.js', async (req, res) => {
+    try {
+        const novavendamensal = await VendaMensal.create(req.body);
+        res.json(novavendamensal);
+    } catch (error) {
+        res.json({error: error});
+    }
+});
 
+app.get('/vendas', async (req, res) => {
+    try {
+        const venda = await VendaMensal.find();
+        res.json(venda);
+    } catch (error) {
+        res.json({error: error});
+    }
+});
 
+//criação do schema usuario
+app.post('/usuario.js', async (req, res) => {
+    try {
+        const novoUsuario = await usuario.create(req.body);
+        res.json(novoUsuario);
+    } catch (error) {
+        res.json({error: error.message});
+    }
+});
 
 const start = async () => {
     await conn();
@@ -28,4 +55,4 @@ const start = async () => {
     });
 };
 
-start();
+start(); 
